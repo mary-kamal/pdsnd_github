@@ -4,7 +4,7 @@
 15th June, 2020.
 
 ### Description
-Describe what your project is about and what it does
+Allows user to interactively explore bike share datasets from Chicago, New York City and Washington.
 
 ### Files used
 Include the files used
