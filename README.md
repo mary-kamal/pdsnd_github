@@ -1,8 +1,7 @@
+# Interactive Analysis of Bike Share Data
+
 ### Date created
 15th June, 2020.
-
-### Project Title
-Replace the Project Title
 
 ### Description
 Describe what your project is about and what it does
