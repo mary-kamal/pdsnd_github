@@ -10,6 +10,12 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july']
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
+
+# helpers
+def print_line():
+    print('-'*40)
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -37,8 +43,7 @@ def get_filters():
     while day not in DAYS + ['all']:
         day = input('Please select a valid day from {all, %s}: ' % (', '.join(DAYS))).lower()
 
-
-    print('-'*40)
+    print_line()
     return city, month, day
 
 
@@ -100,7 +105,7 @@ def time_stats(df):
     print('Most popular hour: %d.' % (popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def station_stats(df):
@@ -122,7 +127,7 @@ def station_stats(df):
     print('Most popular combination of start station and end station: %s and %s.' % popular_combo)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def trip_duration_stats(df):
@@ -142,7 +147,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def user_stats(df):
@@ -168,7 +173,7 @@ def user_stats(df):
         print(df['Birth Year'].describe())
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def view_data(df):
