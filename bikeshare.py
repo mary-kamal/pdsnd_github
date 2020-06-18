@@ -179,7 +179,7 @@ def view_data(df):
 
     while True:
         
-        # obtain valid input
+        # obtain yes/no input
         see_data = ''
         while see_data not in ('yes', 'no'):
             see_data = input('Would you like to see 5 rows of raw data (yes/no): ').lower()
@@ -204,16 +204,22 @@ def view_data(df):
 
 def main():
     while True:
+        # obtain filters
         city, month, day = get_filters()
+
+        # load data
         df = load_data(city, month, day)
 
+        # display various statistics
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
         
+        # let user explore raw data
         view_data(df)
 
+        # ask user if they'd like to start again
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
